@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Task</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Layout */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #282c34;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #ff5722;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /* Form Styles */
+        form {
+            background-color: #333;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            color: #ff5722;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            border: 2px solid #333;
+            border-radius: 6px;
+            background-color: #444;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #ff5722;
+        }
+
+        /* Button Styles */
+        button {
+            background-color: #ff5722;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e64a19;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            form {
+                padding: 20px;
+                width: 90%;
+            }
+
+            input[type="text"] {
+                font-size: 0.9rem;
+            }
+
+            button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Add New Task</h1>
+    <form action="/todos" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" placeholder="Enter task title" required>
+
+        <label for="description">Description:</label>
+        <input type="text" name="description" placeholder="Enter task description">
+
+        <button type="submit">Add Task</button>
+    </form>
+</body>
+</html>

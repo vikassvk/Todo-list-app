@@ -1,0 +1,135 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#414141;
+    color: white;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header */
+h1 {
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for content */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Task list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+ul li.completed {
+    background-color: #d4edda;
+    text-decoration: line-through;
+}
+
+ul li a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Task completion toggle button */
+ul li .toggle-complete {
+    cursor: pointer;
+    color: #28a745;
+}
+
+ul li .toggle-complete:hover {
+    text-decoration: underline;
+}
+
+/* Form styles */
+form {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li a {
+        margin-top: 5px;
+    }
+}
+
